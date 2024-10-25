@@ -30,6 +30,8 @@ def save_data(data):
 #add new expense
 def add_expense(description, amount):
     expenses = load_data()
+    if amount < 0:
+        print('Amount cannot be negative.')
     new_id = len(expenses) +1
     expense = {
         'id' : new_id,
