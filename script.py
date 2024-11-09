@@ -19,7 +19,7 @@ def load_data():
 
 #save  update expenses
 def save_data(data):
-    with open(DATA_FILE, 'w') as file:
+    with open(DATA_FILE, 'w+') as file:
         fieldnames = ['id', 'date' , 'description', 'amount']
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
